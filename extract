@@ -1,0 +1,63 @@
+#!/bin/bash
+
+file="$1"
+
+if [ ! -f "$file" ]; then
+  echo "check spelling idiot"
+  exit 2
+fi
+
+filename=$(basename "$file")
+
+case "$filename" in
+  *.tar.gz|*.tgz|*.TAR.GZ|*.TGZ)
+    tar -xzvf "$file"
+    ;;
+  *.tar.bz2|*.tbz2|*.TAR.BZ2|*.TBZ2)
+    tar -xjvf "$file"
+    ;;
+  *.tar.xz|*.txz|*.TAR.XZ|*.TXZ)
+    tar -xJvf "$file"
+    ;;
+  *.tar.zst|*.tzst|*.TAR.ZST|*.TZST)
+    tar --zstd -xvf "$file"
+    ;;
+  *.tar.lz4|*.TAR.LZ4)
+    tar --lz4 -xvf "$file"
+    ;;
+  *.tar|*.TAR)
+    tar -xvf "$file"
+    ;;
+  *.gz|*.GZ)
+    gunzip "$file"
+    ;;
+  *.bz2|*.BZ2)
+    bunzip2 "$file"
+    ;;
+  *.xz|*.XZ)
+    unxz "$file"
+    ;;
+  *.zip|*.ZIP)
+    unzip "$file"
+    ;;
+  *.7z|*.7Z)
+    7z x "$file"
+    ;;
+  *.rar|*.RAR)
+    unrar x "$file"
+    ;;
+  *.zst|*.ZST)
+    zstd -d "$file"
+    ;;
+  *.lz4|*.LZ4)
+    lz4 -d "$file"
+    ;;
+  *.deb|*.DEB)
+    dpkg-deb -x "$file" extracted_deb/
+    ;;
+  *)
+    echo "Unsupported file type: $file"
+    exit 3
+    ;;
+esac
+

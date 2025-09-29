@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Turn Bluetooth off and then on
+echo "Restarting Bluetooth..."
+rfkill block bluetooth
+sleep 2
+rfkill unblock bluetooth
+sleep 2
+
+# Open bluetoothctl and run commands
+echo "Opening bluetoothctl and connecting to device..."
+bluetoothctl << EOF
+devices
+connect 4E:71:20:24:8C:32
+exit
+EOF
+

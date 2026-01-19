@@ -1,6 +1,8 @@
 #!/bin/bash
 sudo apt update -y && sudo apt upgrade -y
 sudo apt-get install snap -y snapd
+sudo apt install gedit -y 
+sudo apt install vim -y
 #vs code
 sudo snap install --classic code
 #installing python

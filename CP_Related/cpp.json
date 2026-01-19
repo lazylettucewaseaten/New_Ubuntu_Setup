@@ -1,0 +1,32 @@
+{
+    "run": {
+        "prefix": "run",
+        "body": [
+            "// _                 _      _   _                  ",
+            "//| | __ _ _____   _| | ___| |_| |_ _   _  ___ ___ ",
+            "//| |/ _` |_  / | | | |/ _ \\ __| __| | | |/ __/ _ \\lazylettuce",
+            "//| | (_| |/ /| |_| | |  __/ |_| |_| |_| | (_|  __/",
+            "//|_|\\__,_/___|\\__, |_|\\___|\\__|\\__|\\__,_|\\___\\___|",
+            "//             |___/                               ",
+            "#include <bits/stdc++.h>",
+            "#define int long long",
+            "using namespace std;",
+            
+            "int MOD1=998244353;",
+            "int MOD2=1000000007;",
+            
+            "int32_t main() {",
+            "ios::sync_with_stdio(false);",
+            "cin.tie(nullptr);",
+            "int t=1;",
+            "cin>>t;",
+            "while(t--){",
+            "    $0",
+            "}",
+
+            "}"
+        ],
+        "description": "CP run template with lazylettuce and test cases"
+    }
+}
+

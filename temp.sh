@@ -3,6 +3,9 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt-get install snap -y snapd
 sudo apt install gedit -y 
 sudo apt install vim -y
+sudo apt install npm
+sudo apt install xclip
+
 #vs code
 sudo snap install --classic code
 #installing python
@@ -46,4 +49,4 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packa
 sudo apt update
 sudo apt install microsoft-edge-stable
 
-
+npm install -g @google/gemini-cli

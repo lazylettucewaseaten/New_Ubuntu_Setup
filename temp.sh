@@ -49,11 +49,21 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packa
 sudo apt update
 sudo apt install microsoft-edge-stable
 
+#for the atcoderlirazry setup 
+git clone https://github.com/atcoder/ac-library.git $HOME/atcoder-library
+echo export CPLUS_INCLUDE_PATH=\"\$HOME/atcoder-library:\$CPLUS_INCLUDE_PATH\" >> $HOME/.bashrc
+
+
+
+#might not work 
 curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 nvm --version
 nvm install 20
 sudo npm uninstall -g @google/gemini-cli
 npm install -g @google/gemini-cli
+
+
+
 gemini
 

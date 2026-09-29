@@ -15,6 +15,30 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get install -f -y
 
+
+#vs code xtensions
+code --install-extension formulahendry.code-runner \
+     --install-extension DivyanshuAgrawal.competitive-programming-helper \
+     --install-extension ms-azuretools.vscode-containers \
+     --install-extension ms-azuretools.vscode-docker \
+     --install-extension eamodio.gitlens \
+     --install-extension ms-toolsai.jupyter \
+     --install-extension ms-vscode.cpptools
+     
+     
+
+echo "Installing CLI tools..."
+
+# 1. Antigravity CLI (agy)
+curl -fsSL https://antigravity.google/cli/install.sh | bash
+
+# 2. Claude Code CLI (claude)
+curl -fsSL https://claude.ai/install.sh | bash
+
+# 3. OpenAI Codex CLI (codex)
+npm install -g @openai/codex
+
+echo "All CLI installations complete!"
 #anaconda
 
 #wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh

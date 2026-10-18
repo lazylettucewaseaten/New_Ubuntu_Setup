@@ -57,13 +57,13 @@ sudo apt-get install -y build-essential gdb gcc
 
 #obs studio 
 sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt install obs-studio
+sudo apt install obs-studio -y
 
 #vlc
-sudo apt install vlc
+sudo apt install vlc -y
 
 #for my night lighht
-sudo apt install redshift
+sudo apt install redshift -y
 #usgwe redshift -x to turn ogg
 #redshift -O 3500 to tuern on
 
@@ -71,23 +71,11 @@ sudo apt install redshift
 curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft.gpg > /dev/null
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/edge stable main" | sudo tee /etc/apt/sources.list.d/microsoft-edge.list > /dev/null
 sudo apt update
-sudo apt install microsoft-edge-stable
+sudo apt install microsoft-edge-stable -y
 
 #for the atcoderlirazry setup 
 git clone https://github.com/atcoder/ac-library.git $HOME/atcoder-library
 echo export CPLUS_INCLUDE_PATH=\"\$HOME/atcoder-library:\$CPLUS_INCLUDE_PATH\" >> $HOME/.bashrc
 
-
-
-#might not work 
-curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.bashrc
-nvm --version
-nvm install 20
-sudo npm uninstall -g @google/gemini-cli
-npm install -g @google/gemini-cli
-
-
-
-gemini
-
+#game for myself
+sudo apt install tint -y

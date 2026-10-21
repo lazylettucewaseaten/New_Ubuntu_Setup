@@ -26,6 +26,7 @@ code --install-extension formulahendry.code-runner \
      --install-extension ms-vscode.cpptools
      
      
+sudo snap install obsidian --classic     
 
 echo "Installing CLI tools..."
 
